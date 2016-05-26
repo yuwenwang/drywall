@@ -57,5 +57,6 @@
     "jquery.cookie": "1.x.x",
     "moment": "2.13.x",
     "respond.js": "1.x.x"
-  }
+  },
+  "engine": "node 4.4.5"
 }
