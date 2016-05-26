@@ -6,22 +6,22 @@ exports.mongodb = {
 };
 exports.companyName = 'Acme, Inc.';
 exports.projectName = 'Drywall';
-exports.systemEmail = 'your@email.addy';
+exports.systemEmail = 'thisissparda111@gmail.com';
 exports.cryptoKey = 'k3yb0ardc4t';
 exports.loginAttempts = {
   forIp: 50,
   forIpAndUser: 7,
-  logExpiration: '20m'
+  logExpiration: '10m'
 };
 exports.requireAccountVerification = false;
 exports.smtp = {
   from: {
     name: process.env.SMTP_FROM_NAME || exports.projectName +' Website',
-    address: process.env.SMTP_FROM_ADDRESS || 'your@email.addy'
+    address: process.env.SMTP_FROM_ADDRESS || 'thisissparda111@gmail.com'
   },
   credentials: {
-    user: process.env.SMTP_USERNAME || 'your@email.addy',
-    password: process.env.SMTP_PASSWORD || 'bl4rg!',
+    user: process.env.SMTP_USERNAME || 'thisissparda111@gmail.com',
+    password: process.env.SMTP_PASSWORD || 'diannao1',
     host: process.env.SMTP_HOST || 'smtp.gmail.com',
     ssl: true
   }
