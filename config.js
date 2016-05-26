@@ -4,8 +4,8 @@ exports.port = process.env.PORT || 3000;
 exports.mongodb = {
   uri: process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://jk:jk@ds036789.mlab.com:36789/jktest'
 };
-exports.companyName = 'Acme, Inc.';
-exports.projectName = 'Drywall';
+exports.companyName = '锤子科技, Inc.';
+exports.projectName = 'Sparda';
 exports.systemEmail = 'thisissparda111@gmail.com';
 exports.cryptoKey = 'k3yb0ardc4t';
 exports.loginAttempts = {
