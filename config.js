@@ -2,7 +2,7 @@
 
 exports.port = process.env.PORT || 3000;
 exports.mongodb = {
-  uri: process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://jk:jk@ds036789.mlab.com:36789/jktest'
+  uri: process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://192.168.99.100:27017/drywall'
 };
 exports.companyName = 'Acme, Inc.';
 exports.projectName = 'Drywall';
