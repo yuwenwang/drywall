@@ -1,4 +1,9 @@
 'use strict';
+var xlsx = require('xlsx');
+var fs = require('fs');
+var multer  = require('multer');
+var upload = multer({ dest: 'D:\\temp\\uploads' });
+
 
 function ensureAuthenticated(req, res, next) {
   if (req.isAuthenticated()) {
@@ -134,6 +139,16 @@ exports = module.exports = function(app, passport) {
   app.get('/admin/categories/:id/', require('./views/admin/categories/index').read);
   app.put('/admin/categories/:id/', require('./views/admin/categories/index').update);
   app.delete('/admin/categories/:id/', require('./views/admin/categories/index').delete);
+
+  //add by wendy
+  //admin > customer
+  app.get('/admin/customer/', require('./views/admin/customer/index').find);
+  app.post('/admin/customer/', require('./views/admin/customer/index').create);
+  app.get('/admin/customer/:id/', require('./views/admin/customer/index').read);
+  app.put('/admin/customer/:id/', require('./views/admin/customer/index').update);
+  app.delete('/admin/customer/:id/', require('./views/admin/customer/index').delete);
+  app.post('/admin/customer/upload', upload.single('xlfile'), require('./views/admin/customer/index').upload);
+  //end add by wendy
 
   //admin > search
   app.get('/admin/search/', require('./views/admin/search/index').find);
